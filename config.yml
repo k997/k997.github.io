@@ -129,7 +129,8 @@ params:
     #     keys: ["title", "permalink", "summary", "content"]
 
 	twikoo: # 评论
-        version: 1.6.7 // 这个版本号要自己手动修改，和twikoo的版本号要对得上
+        # 版本需和twikoo的版本号要对得上
+        version: 1.6.7 
         envId: "https://twikoo.kongwg.top"
 
 taxonomies:
