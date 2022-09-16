@@ -43,7 +43,7 @@ outputs:
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    description: "kong's blog - www.kongwg.top"
+    description: "kong's blog - k997.github.io"
     author: kong
     # author: ["Me", "You"] # multiple authors
 
@@ -87,14 +87,14 @@ params:
            # - 短横线后的内容跟上一行的内容在网页上被识别为一行
     socialIcons:
         - name: github
-          url: "https://github.com/adityatelange/hugo-PaperMod"
+          url: "https://github.com/k997"
 #        - name: KoFi
 #          url: "https://ko-fi.com/adityatelange"
         - name: RsS
           url: "index.xml"
 # jump github to make suggestions 
     editPost:
-        URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
+        URL: "https://github.com/k997/k997.github.io/tree/main/content"
         Text: "你对文章的建议" # edit text
         appendFilePath: true # to append file path to Edit link
 
@@ -115,9 +115,9 @@ params:
     #     safari_pinned_tab: "<link / abs url>"
 
     # cover:
-    #     hidden: true # hide everywhere but not in structured data
-    #     hiddenInList: true # hide on list pages and home
-    #     hiddenInSingle: true # hide on single page
+    #     hidden: true # hide everywhere but not in structured data 是否在下面两种情况下显示
+    #     hiddenInList: true # hide on list pages and home 是否在列表视图中显示
+    #     hiddenInSingle: true # hide on single page 是否在单页视图中显示
 
     # fuseOpts:
     #     isCaseSensitive: false
