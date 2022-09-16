@@ -8,7 +8,7 @@
     <script src="https://cdn.staticfile.org/twikoo/{{ .Site.Params.twikoo.version }}/twikoo.all.min.js"></script>
     <script>
         twikoo.init({
-            envId: "{{ .Site.Params.twikoo.envId ",  //这里填写自己的envId
+            envId: "{{ .Site.Params.twikoo.envId }}",  //这里填写自己的envId
             el: "#tcomment", // 容器元素
             lang: 'zh-CN', // 用于手动设定评论区语言，支持的语言列表 https://github.com/imaegoo/twikoo/blob/main/src/client/utils/i18n/index.js
             // region: 'ap-guangzhou',  // 腾讯云环境地域，其他方式部署不填，默认为 ap-shanghai ，也可以为 ap-guangzhou
