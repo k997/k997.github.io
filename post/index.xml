@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>kong</title>
-    <link>https://k997.github.io/</link>
-    <description>Recent content on kong</description>
+    <title>Posts on kong</title>
+    <link>https://k997.github.io/post/</link>
+    <description>Recent content in Posts on kong</description>
     <image>
       <url>https://k997.github.io/papermod-cover.png</url>
       <link>https://k997.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 17 Sep 2022 04:27:53 +0000</lastBuildDate><atom:link href="https://k997.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Sep 2022 04:27:53 +0000</lastBuildDate><atom:link href="https://k997.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo</title>
       <link>https://k997.github.io/post/hugo-install-and-config/</link>
@@ -18,8 +18,6 @@
       <guid>https://k997.github.io/post/hugo-install-and-config/</guid>
       <description>hugo 安装及配置 github 创建仓库 git clone 仓库至本地 hugo new site . --force -f yml --force表示在已存在文件夹下创建网站 -f yml表示 config 使用 YAML 格式 git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod git submodule update --init --recursive 编辑配置文件 baseURL: &amp;#34;https://k997.github.io&amp;#34; title: kong paginate: 7 theme: PaperMod enableInlineShortcodes: true enableRobotsTXT: true buildDrafts: false buildFuture: false buildExpired: false enableEmoji: true pygmentsUseClasses: true # googleAnalytics: UA-123-45 minify: disableXML: true minifyOutput: true menu: main: - identifier: archives name: Archives url: archives/ weight: 5 - identifier: search name: Search url: search/ weight: 20 - identifier: categories name: Categories url: categories/ weight: 10 - identifier: tags name: Tags url: tags/ weight: 10 outputs: home: - HTML - RSS - JSON params: env: production # to enable google analytics, opengraph, twitter-cards and schema.</description>
     </item>
-    
-    
     
   </channel>
 </rss>
