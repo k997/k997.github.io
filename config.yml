@@ -61,7 +61,7 @@ params:
     disableScrollToTop: false
 
     displayFullLangName: true
-    # comments: false
+    comments: true
     hidemeta: false
     hideSummary: false
 
