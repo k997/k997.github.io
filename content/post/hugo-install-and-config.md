@@ -38,19 +38,19 @@ draft: false
     menu:
     main:
         - identifier: archives
-        name: Archives
+        name: 归档
         url: archives/
         weight: 5
         - identifier: search
-        name: Search
+        name: 搜索
         url: search/
         weight: 20
         - identifier: categories
-        name: Categories
+        name: 分类
         url: categories/
         weight: 10
         - identifier: tags
-        name: Tags
+        name: 标签
         url: tags/
         weight: 10
 
@@ -194,4 +194,36 @@ draft: false
         twitter:
             disableInlineCSS: true
 
+    ```
+## 汉化
+1. 分类
+
+    content 目录下新建 `categories\_index.md`:
+    ```yaml
+    ---
+    title: "分类"
+    ---
+    ```
+2. 标签
+    content 目录下新建 `tags\_index.md`:
+    ```yaml
+    title: "标签"
+    ```
+3. 归档
+    content 目录下新建 `archives.md`:
+    ```yaml
+    ---
+    title: "归档"
+    layout: "archives"
+    # url: "/archives"
+    summary: "archives"
+    ---
+    ```
+4. 搜索
+    content 目录下新建 `search.md`:
+    ```yaml
+    ---
+    title: "搜索"
+    layout: "search"
+    ---
     ```

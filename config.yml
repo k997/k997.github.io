@@ -19,19 +19,19 @@ minify:
 menu:
   main:
     - identifier: archives
-      name: Archives
+      name: 归档
       url: archives/
       weight: 5
     - identifier: search
-      name: Search
+      name: 搜索
       url: search/
       weight: 20
     - identifier: categories
-      name: Categories
+      name: 分类
       url: categories/
       weight: 10
     - identifier: tags
-      name: Tags
+      name: 标签
       url: tags/
       weight: 10
 
