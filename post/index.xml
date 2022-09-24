@@ -9,7 +9,18 @@
       <link>https://k997.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 17 Sep 2022 04:27:53 +0000</lastBuildDate><atom:link href="https://k997.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Sep 2022 10:46:59 +0000</lastBuildDate><atom:link href="https://k997.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu 下 Bind 配置 Dns 域名服务</title>
+      <link>https://k997.github.io/post/config-dns-service-with-bind-under-ubuntu/</link>
+      <pubDate>Sat, 24 Sep 2022 10:46:59 +0000</pubDate>
+      
+      <guid>https://k997.github.io/post/config-dns-service-with-bind-under-ubuntu/</guid>
+      <description>背景 服务器上 systemd-resolved 经常挂掉，导致无法解析域名，排查问题无果遂决定使用 bind 替代 systemd-resolved 。
+安装 bind sudo apt update sudo apt install bind9 编辑配置文件 编辑 bind 配置文件 /etc/bind/named.conf.options , 配置上游 dns 服务器 forwarders { 8.8.8.8;}; 及监听地址 listen-on { any; }; ,最终配置文件如下：
+options { directory &amp;#34;/var/cache/bind&amp;#34;; // If there is a firewall between you and nameservers you want // to talk to, you may need to fix the firewall to allow multiple // ports to talk. See http://www.</description>
+    </item>
+    
     <item>
       <title>Hugo</title>
       <link>https://k997.github.io/post/hugo-install-and-config/</link>

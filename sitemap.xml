@@ -2,13 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://k997.github.io/post/hugo-install-and-config/</loc>
-    <lastmod>2022-09-17T04:27:53+00:00</lastmod>
+    <loc>https://k997.github.io/tags/bind/</loc>
+    <lastmod>2022-09-24T10:46:59+00:00</lastmod>
+  </url><url>
+    <loc>https://k997.github.io/tags/dns/</loc>
+    <lastmod>2022-09-24T10:46:59+00:00</lastmod>
   </url><url>
     <loc>https://k997.github.io/</loc>
-    <lastmod>2022-09-17T04:27:53+00:00</lastmod>
+    <lastmod>2022-09-24T10:46:59+00:00</lastmod>
   </url><url>
     <loc>https://k997.github.io/post/</loc>
+    <lastmod>2022-09-24T10:46:59+00:00</lastmod>
+  </url><url>
+    <loc>https://k997.github.io/tags/</loc>
+    <lastmod>2022-09-24T10:46:59+00:00</lastmod>
+  </url><url>
+    <loc>https://k997.github.io/post/config-dns-service-with-bind-under-ubuntu/</loc>
+    <lastmod>2022-09-24T10:46:59+00:00</lastmod>
+  </url><url>
+    <loc>https://k997.github.io/tags/%E7%BD%91%E7%BB%9C/</loc>
+    <lastmod>2022-09-24T10:46:59+00:00</lastmod>
+  </url><url>
+    <loc>https://k997.github.io/post/hugo-install-and-config/</loc>
     <lastmod>2022-09-17T04:27:53+00:00</lastmod>
   </url><url>
     <loc>https://k997.github.io/archives/</loc>
@@ -18,7 +33,5 @@
     <loc>https://k997.github.io/search/</loc>
   </url><url>
     <loc>https://k997.github.io/series/</loc>
-  </url><url>
-    <loc>https://k997.github.io/tags/</loc>
   </url>
 </urlset>
