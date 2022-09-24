@@ -1,10 +1,9 @@
 ---
-title: Hugo
+title: hugo 安装及配置
 date: 2022-09-17T04:27:53.000Z
 draft: false
 ---
-
-# hugo 安装及配置
+## hugo 安装
 
 1.  github 创建仓库
 2.  git clone 仓库至本地
@@ -227,3 +226,65 @@ draft: false
     layout: "search"
     ---
     ```
+## 评论系统 twikoo
+1. docker 部署 twikko
+
+    此处用 traefik 反代 twikko，访问 twikoo 的链接即 twikoo 的 envId。
+    
+    部署完成后访问 twikoo 链接，获取 twikoo 版本。
+    ```yaml
+    version: '3'
+
+    services:
+    twikoo:
+        image: imaegoo/twikoo
+        restart: always
+        volumes:
+        - $DOCKER_DATA/twikoo:/app/data
+        environment:
+        - TWIKOO_THROTTLE=1000 # ip 访问频率限制
+        labels:
+        - traefik.enable=true
+        - traefik.http.routers.twikoo.rule=Host(`< twikoo 域名 >`)
+        - traefik.http.routers.twikoo.tls=true
+        - traefik.http.routers.twikoo.tls.certresolver=letsencrypt
+
+    ```
+2. layouts 目录下创建 `partials/comments.html`
+    
+    `layouts/partials/comments.html` 会覆盖 papermod 下的 `layouts/partials/comments.html`
+    ```html
+    <!-- Twikoo -->
+    <div>
+        <div class="pagination__title">
+            <span class="pagination__title-h" style="font-size: 20px;">💬评论</span>
+            <hr />
+        </div>
+        <div id="tcomment"></div>
+        <script src="https://cdn.staticfile.org/twikoo/{{ .Site.Params.twikoo.version }}/twikoo.all.min.js"></script>
+        <script>
+            twikoo.init({
+                envId: "{{ .Site.Params.twikoo.envId }}",  // envId
+                el: "#tcomment", // 容器元素
+                lang: 'zh-CN', // 用于手动设定评论区语言，支持的语言列表 https://github.com/imaegoo/twikoo/blob/main/src/client/utils/i18n/index.js
+                // region: 'ap-guangzhou',  // 腾讯云环境地域，其他方式部署不填，默认为 ap-shanghai ，也可以为 ap-guangzhou
+                // path: window.TWIKOO_MAGIC_PATH||window.location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+            });
+        </script>
+    </div>
+    ```
+3. 配置 twikoo 变量
+   ```yaml
+   # config.yaml
+   ...
+   params:
+    ...
+    twikoo:
+      # 版本需和twikoo的版本号要对得上
+      version: "< twikoo 版本 >" 
+      envId: "https://< twikoo 域名 >"
+   ```
+4. 打开博客页面，点击评论框下的齿轮配置 twikoo 参数
+## 参考
+1. [Hugo Papermod 主题配置与使用](https://bore.vip/archives/ca21a352/#%E5%8A%A0%E5%85%A5Waline%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F)
+2. [Twikoo 文档](https://twikoo.js.org/)
