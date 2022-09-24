@@ -9,7 +9,18 @@
       <link>https://k997.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 24 Sep 2022 10:46:59 +0000</lastBuildDate><atom:link href="https://k997.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Sep 2022 12:29:20 +0000</lastBuildDate><atom:link href="https://k997.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Archlinux  Build Bochs Debugger Gui</title>
+      <link>https://k997.github.io/post/archlinux-build-bochs-debugger-gui/</link>
+      <pubDate>Sat, 24 Sep 2022 12:29:20 +0000</pubDate>
+      
+      <guid>https://k997.github.io/post/archlinux-build-bochs-debugger-gui/</guid>
+      <description>背景 archlinux 默认安装的 bochs 不带 debug gui，调试程序时候需要在 bochs 手动打印寄存器及其他信息，通过 bochs 的 debug gui 可以方便查看程序相关信息。
+创建 PKGBUILD 文件 mkdir bochs-enhanced-debugger touch PKGBUILD 参考AUR (en) - bochs-gdb-stub (archlinux.org)
+pkgname=bochs-enhanced-debugger pkgver=2.7 pkgrel=1 pkgdesc=&amp;#34;A portable x86 PC emulation software package with enhanced debugger&amp;#34; arch=(&amp;#39;x86_64&amp;#39;) url=&amp;#34;http://bochs.sourceforge.net/&amp;#34; license=(&amp;#39;LGPL&amp;#39;) depends=(&amp;#39;gcc-libs&amp;#39; &amp;#39;libxrandr&amp;#39; &amp;#39;libxpm&amp;#39; &amp;#39;gtk2&amp;#39;) replaces=(&amp;#34;bochs-enhanced-debugger&amp;#34;) conflicts=(&amp;#34;bochs-enhanced-debugger&amp;#34;) source=(&amp;#34;http://downloads.sourceforge.net/sourceforge/bochs/bochs-$pkgver.tar.gz&amp;#34;) sha256sums=(&amp;#39;a010ab1bfdc72ac5a08d2e2412cd471c0febd66af1d9349bc0d796879de5b17a&amp;#39;) prepare() { cd &amp;#34;$srcdir/bochs-$pkgver&amp;#34; # 4.X kernel is basically 3.20 sed -i &amp;#39;s/2\.6\*|3\.\*)/2.6*|3.*|4.*)/&amp;#39; configure* } build() { cd &amp;#34;$srcdir/bochs-$pkgver&amp;#34; ./configure \ --prefix=/usr \ --without-wx \ --with-x11 \ --with-x \ --with-term \ --disable-docbook \ --enable-cpu-level=6 \ --enable-fpu \ --enable-3dnow \ --enable-disasm \ --enable-long-phy-address \ --enable-disasm \ --enable-pcidev \ --enable-usb \ --enable-iodebug \ --enable-smp \ --enable-x86-64 \ --enable-avx \ --enable-evex \ --enable-debugger \ --enable-x86-debugger \ --enable-debugger-gui #--with-sdl #--enable-all-optimizations #--enable-plugins sed -i &amp;#39;s/^LIBS = /LIBS = -lpthread/g&amp;#39; Makefile make -j $(nproc) } package() { cd &amp;#34;$srcdir/bochs-$pkgver&amp;#34; make DESTDIR=&amp;#34;$pkgdir&amp;#34; install install -Dm644 .</description>
+    </item>
+    
     <item>
       <title>Ubuntu 下 Bind 配置 Dns 域名服务</title>
       <link>https://k997.github.io/post/config-dns-service-with-bind-under-ubuntu/</link>

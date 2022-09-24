@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>kong</title>
-    <link>https://k997.github.io/</link>
-    <description>Recent content on kong</description>
+    <title>archlinux on kong</title>
+    <link>https://k997.github.io/tags/archlinux/</link>
+    <description>Recent content in archlinux on kong</description>
     <image>
       <url>https://k997.github.io/papermod-cover.png</url>
       <link>https://k997.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 24 Sep 2022 12:29:20 +0000</lastBuildDate><atom:link href="https://k997.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Sep 2022 12:29:20 +0000</lastBuildDate><atom:link href="https://k997.github.io/tags/archlinux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Archlinux  Build Bochs Debugger Gui</title>
       <link>https://k997.github.io/post/archlinux-build-bochs-debugger-gui/</link>
@@ -20,28 +20,6 @@
 创建 PKGBUILD 文件 mkdir bochs-enhanced-debugger touch PKGBUILD 参考AUR (en) - bochs-gdb-stub (archlinux.org)
 pkgname=bochs-enhanced-debugger pkgver=2.7 pkgrel=1 pkgdesc=&amp;#34;A portable x86 PC emulation software package with enhanced debugger&amp;#34; arch=(&amp;#39;x86_64&amp;#39;) url=&amp;#34;http://bochs.sourceforge.net/&amp;#34; license=(&amp;#39;LGPL&amp;#39;) depends=(&amp;#39;gcc-libs&amp;#39; &amp;#39;libxrandr&amp;#39; &amp;#39;libxpm&amp;#39; &amp;#39;gtk2&amp;#39;) replaces=(&amp;#34;bochs-enhanced-debugger&amp;#34;) conflicts=(&amp;#34;bochs-enhanced-debugger&amp;#34;) source=(&amp;#34;http://downloads.sourceforge.net/sourceforge/bochs/bochs-$pkgver.tar.gz&amp;#34;) sha256sums=(&amp;#39;a010ab1bfdc72ac5a08d2e2412cd471c0febd66af1d9349bc0d796879de5b17a&amp;#39;) prepare() { cd &amp;#34;$srcdir/bochs-$pkgver&amp;#34; # 4.X kernel is basically 3.20 sed -i &amp;#39;s/2\.6\*|3\.\*)/2.6*|3.*|4.*)/&amp;#39; configure* } build() { cd &amp;#34;$srcdir/bochs-$pkgver&amp;#34; ./configure \ --prefix=/usr \ --without-wx \ --with-x11 \ --with-x \ --with-term \ --disable-docbook \ --enable-cpu-level=6 \ --enable-fpu \ --enable-3dnow \ --enable-disasm \ --enable-long-phy-address \ --enable-disasm \ --enable-pcidev \ --enable-usb \ --enable-iodebug \ --enable-smp \ --enable-x86-64 \ --enable-avx \ --enable-evex \ --enable-debugger \ --enable-x86-debugger \ --enable-debugger-gui #--with-sdl #--enable-all-optimizations #--enable-plugins sed -i &amp;#39;s/^LIBS = /LIBS = -lpthread/g&amp;#39; Makefile make -j $(nproc) } package() { cd &amp;#34;$srcdir/bochs-$pkgver&amp;#34; make DESTDIR=&amp;#34;$pkgdir&amp;#34; install install -Dm644 .</description>
     </item>
-    
-    <item>
-      <title>Ubuntu 下 Bind 配置 Dns 域名服务</title>
-      <link>https://k997.github.io/post/config-dns-service-with-bind-under-ubuntu/</link>
-      <pubDate>Sat, 24 Sep 2022 10:46:59 +0000</pubDate>
-      
-      <guid>https://k997.github.io/post/config-dns-service-with-bind-under-ubuntu/</guid>
-      <description>背景 服务器上 systemd-resolved 经常挂掉，导致无法解析域名，排查问题无果遂决定使用 bind 替代 systemd-resolved 。
-安装 bind sudo apt update sudo apt install bind9 编辑配置文件 编辑 bind 配置文件 /etc/bind/named.conf.options , 配置上游 dns 服务器 forwarders { 8.8.8.8;}; 及监听地址 listen-on { any; }; ,最终配置文件如下：
-options { directory &amp;#34;/var/cache/bind&amp;#34;; // If there is a firewall between you and nameservers you want // to talk to, you may need to fix the firewall to allow multiple // ports to talk. See http://www.</description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://k997.github.io/post/hugo-install-and-config/</link>
-      <pubDate>Sat, 17 Sep 2022 04:27:53 +0000</pubDate>
-      
-      <guid>https://k997.github.io/post/hugo-install-and-config/</guid>
-      <description>hugo 安装及配置 github 创建仓库 git clone 仓库至本地 hugo new site . --force -f yml --force表示在已存在文件夹下创建网站 -f yml表示 config 使用 YAML 格式 git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod git submodule update --init --recursive 编辑配置文件 baseURL: &amp;#34;https://k997.github.io&amp;#34; title: kong paginate: 7 theme: PaperMod enableInlineShortcodes: true enableRobotsTXT: true buildDrafts: false buildFuture: false buildExpired: false enableEmoji: true pygmentsUseClasses: true # googleAnalytics: UA-123-45 minify: disableXML: true minifyOutput: true menu: main: - identifier: archives name: Archives url: archives/ weight: 5 - identifier: search name: Search url: search/ weight: 20 - identifier: categories name: Categories url: categories/ weight: 10 - identifier: tags name: Tags url: tags/ weight: 10 outputs: home: - HTML - RSS - JSON params: env: production # to enable google analytics, opengraph, twitter-cards and schema.</description>
-    </item>
-    
-    
     
   </channel>
 </rss>
