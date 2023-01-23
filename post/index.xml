@@ -38,7 +38,13 @@ options { directory &amp;#34;/var/cache/bind&amp;#34;; // If there is a firewall
       <pubDate>Sat, 17 Sep 2022 04:27:53 +0000</pubDate>
       
       <guid>https://k997.github.io/post/hugo-install-and-config/</guid>
-      <description>hugo 安装 github 创建仓库 git clone 仓库至本地 hugo new site . --force -f yml --force表示在已存在文件夹下创建网站 -f yml表示 config 使用 YAML 格式 git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod git submodule update --init --recursive 编辑配置文件 baseURL: &amp;#34;https://k997.github.io&amp;#34; title: kong paginate: 7 theme: PaperMod enableInlineShortcodes: true enableRobotsTXT: true buildDrafts: false buildFuture: false buildExpired: false enableEmoji: true pygmentsUseClasses: true # googleAnalytics: UA-123-45 minify: disableXML: true minifyOutput: true menu: main: - identifier: archives name: 归档 url: archives/ weight: 5 - identifier: search name: 搜索 url: search/ weight: 20 - identifier: categories name: 分类 url: categories/ weight: 10 - identifier: tags name: 标签 url: tags/ weight: 10 outputs: home: - HTML - RSS - JSON params: env: production # to enable google analytics, opengraph, twitter-cards and schema.</description>
+      <description>hugo 安装 github 创建仓库
+git clone 仓库至本地
+创建hugo项目
+cd &amp;lt;仓库根目录&amp;gt; hugo new site . --force -f yml --force表示在已存在文件夹下创建网站 -f yml表示 hugo 的 config 使用 YAML 格式
+导入主题模板，此处使用 PaperMod 主题
+git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod git submodule update --init --recursive 编辑目录下的 config.yaml 文件
+baseURL: &amp;#34;https://k997.github.io&amp;#34; title: kong paginate: 7 theme: PaperMod enableInlineShortcodes: true enableRobotsTXT: true buildDrafts: false buildFuture: false buildExpired: false enableEmoji: true pygmentsUseClasses: true # googleAnalytics: UA-123-45 minify: disableXML: true minifyOutput: true menu: main: - identifier: archives name: 归档 url: archives/ weight: 5 - identifier: search name: 搜索 url: search/ weight: 20 - identifier: categories name: 分类 url: categories/ weight: 10 - identifier: tags name: 标签 url: tags/ weight: 10 outputs: home: - HTML - RSS - JSON params: env: production # to enable google analytics, opengraph, twitter-cards and schema.</description>
     </item>
     
   </channel>
