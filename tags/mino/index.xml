@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>mino on kong</title>
+    <link>https://k997.github.io/tags/mino/</link>
+    <description>Recent content in mino on kong</description>
+    <image>
+      <url>https://k997.github.io/papermod-cover.png</url>
+      <link>https://k997.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 28 Jan 2023 20:59:24 +0800</lastBuildDate><atom:link href="https://k997.github.io/tags/mino/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>minio作为图床的 bucket 及 token 策略配置</title>
+      <link>https://k997.github.io/post/minio-image-hosting/</link>
+      <pubDate>Sat, 28 Jan 2023 20:59:24 +0800</pubDate>
+      
+      <guid>https://k997.github.io/post/minio-image-hosting/</guid>
+      <description>bucket 策略配置 以下例子存储桶名称为pic，将 pic 设置为只读。
+{ &amp;#34;Version&amp;#34;: &amp;#34;2012-10-17&amp;#34;, &amp;#34;Statement&amp;#34;: [ { &amp;#34;Effect&amp;#34;: &amp;#34;Allow&amp;#34;, &amp;#34;Principal&amp;#34;: { &amp;#34;AWS&amp;#34;: [ &amp;#34;*&amp;#34; ] }, &amp;#34;Action&amp;#34;: [ &amp;#34;s3:GetObject&amp;#34; ], &amp;#34;Resource&amp;#34;: [ &amp;#34;arn:aws:s3:::pic/**&amp;#34; ] } ] } access token 策略设置 access token 拥有读写权限。
+{ &amp;#34;Version&amp;#34;: &amp;#34;2012-10-17&amp;#34;, &amp;#34;Statement&amp;#34;: [ { &amp;#34;Effect&amp;#34;: &amp;#34;Allow&amp;#34;, &amp;#34;Action&amp;#34;: [ &amp;#34;s3:GetBucketLocation&amp;#34;, &amp;#34;s3:ListBucket&amp;#34; ], &amp;#34;Resource&amp;#34;: [ &amp;#34;arn:aws:s3:::pic&amp;#34; ] }, { &amp;#34;Effect&amp;#34;: &amp;#34;Allow&amp;#34;, &amp;#34;Action&amp;#34;: [ &amp;#34;s3:GetObject&amp;#34;, &amp;#34;s3:PutObject&amp;#34; ], &amp;#34;Resource&amp;#34;: [ &amp;#34;arn:aws:s3:::pic/*&amp;#34; ] } ] } </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://k997.github.io/tags/image-hosting/</loc>
+    <lastmod>2023-01-28T20:59:24+08:00</lastmod>
+  </url><url>
+    <loc>https://k997.github.io/</loc>
+    <lastmod>2023-01-28T20:59:24+08:00</lastmod>
+  </url><url>
+    <loc>https://k997.github.io/post/minio-image-hosting/</loc>
+    <lastmod>2023-01-28T20:59:24+08:00</lastmod>
+  </url><url>
+    <loc>https://k997.github.io/tags/mino/</loc>
+    <lastmod>2023-01-28T20:59:24+08:00</lastmod>
+  </url><url>
+    <loc>https://k997.github.io/post/</loc>
+    <lastmod>2023-01-28T20:59:24+08:00</lastmod>
+  </url><url>
+    <loc>https://k997.github.io/tags/</loc>
+    <lastmod>2023-01-28T20:59:24+08:00</lastmod>
+  </url><url>
     <loc>https://k997.github.io/tags/archlinux/</loc>
     <lastmod>2022-09-24T12:29:20+00:00</lastmod>
   </url><url>
@@ -11,16 +29,7 @@
     <loc>https://k997.github.io/tags/bochs/</loc>
     <lastmod>2022-09-24T12:29:20+00:00</lastmod>
   </url><url>
-    <loc>https://k997.github.io/</loc>
-    <lastmod>2022-09-24T12:29:20+00:00</lastmod>
-  </url><url>
     <loc>https://k997.github.io/tags/os/</loc>
-    <lastmod>2022-09-24T12:29:20+00:00</lastmod>
-  </url><url>
-    <loc>https://k997.github.io/post/</loc>
-    <lastmod>2022-09-24T12:29:20+00:00</lastmod>
-  </url><url>
-    <loc>https://k997.github.io/tags/</loc>
     <lastmod>2022-09-24T12:29:20+00:00</lastmod>
   </url><url>
     <loc>https://k997.github.io/tags/bind/</loc>
